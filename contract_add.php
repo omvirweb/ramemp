@@ -255,8 +255,6 @@
                                     <div class="col-md-3 col-sm-12">
                                         <div class="form-group">
                                             <label for="bonus">Contract Duration</label>
-                                            <!-- <input type="text" class="form-control" id="bonus" name="bonus" placeholder="Enter Bonus" value="<?php echo $bonus; ?>" > -->
-                                            <!-- <input type="text" class="form-control" name="daterange" value="<?php echo date_format($start_date,"d/m/Y") ?> - <?php echo date_format($end_date,"d/m/Y") ?> " /> -->
                                             <input type="text" class="form-control" name="daterange" value="<?php echo $start_date?> - <?php echo $end_date ?>" />
                                         </div>
                                     </div>
