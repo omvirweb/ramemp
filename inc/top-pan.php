@@ -13,6 +13,7 @@ if(isset($_SESSION["i_m_admin"]) && $_SESSION["i_m_admin"] == "true"){
     $ur_wadges = 1;
     $ur_billing_sheet = 1;
     $ur_general_settings = 1;
+    $ur_contract = 1;
     $ur_type = '-1';
     $ur_download_excel_sheet = '1';
     $ur_monthly_salary_status = '1';
@@ -32,6 +33,7 @@ if(isset($_SESSION["i_m_admin"]) && $_SESSION["i_m_admin"] == "true"){
     $ur_wadges = $rwselectuser['l_wadges'];
     $ur_billing_sheet = $rwselectuser['l_billing_sheet'];
     $ur_general_settings = $rwselectuser['l_general_settings'];
+    $ur_contract = $rwselectuser['l_contract'];
     $ur_type = $rwselectuser['l_type'];
     $ur_download_excel_sheet = $rwselectuser['l_download_excel_sheet'];
     $ur_monthly_salary_status = $rwselectuser['l_monthly_salary_status'];
@@ -94,6 +96,11 @@ if(isset($_SESSION["i_m_admin"]) && $_SESSION["i_m_admin"] == "true"){
                   <a class="nav-link" href="<?php echo SITE_ROOT_FRONT;?>department.php">Department</a>
                 </li>
                 <?php } ?>
+                <?php if($ur_contract != '0'){ ?>
+                    <li class="nav-item <?php if($page_name == "Contract"){echo "active";} ?>">
+                      <a class="nav-link" href="<?php echo SITE_ROOT_FRONT;?>contract.php">Contract</a>
+                    </li>
+                <?php } ?>
                 <?php if($ur_employee != '0'){ ?>
                     <li class="nav-item <?php if($page_name == "Employee" || $page_name == "Add Employee" || $page_name == "Edit Employee"){echo "active";} ?>">
                       <a class="nav-link" href="<?php echo SITE_ROOT_FRONT;?>employee.php">Employee</a>
@@ -149,6 +156,7 @@ if(isset($_SESSION["i_m_admin"]) && $_SESSION["i_m_admin"] == "true"){
                       <a class="nav-link" href="<?php echo SITE_ROOT_FRONT;?>generalsettings.php">General Settings</a>
                     </li>
                 <?php } ?>
+            
               </ul>
             </div>
 </nav>
